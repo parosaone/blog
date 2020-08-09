@@ -188,10 +188,13 @@ img {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: bold;
   font-size: 28px;
+
+  @include mobile {
+    margin-top: 9px;
+  }
 }
 
 .site-description {
-  margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
 
