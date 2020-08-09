@@ -100,10 +100,6 @@ ul ul, ol ul {
   list-style-type: circle;
 }
 
-em, i {
-  font-style: italic;
-}
-
 strong, b {
   font-weight: bold;
 }
@@ -118,7 +114,6 @@ img {
 }
 
 .date {
-  font-style: italic;
   color: $gray;
 }
 
@@ -260,7 +255,6 @@ nav {
     padding: 0.1em 1em;
     color: $gray;
     font-size: 22px;
-    font-style: italic;
   }
 
   .comments {
