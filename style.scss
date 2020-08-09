@@ -36,14 +36,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'IBM Plex Sans', sans-serif;
   color: $darkerGray;
   font-weight: bold;
-
-  line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-
-  @include mobile {
-    line-height: 1.4;
-  }
 }
 
 h1 {
@@ -194,7 +188,6 @@ img {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 300;
   font-size: 28px;
-  letter-spacing: 1px;
 }
 
 .site-description {
@@ -225,7 +218,6 @@ nav {
     color: $darkGray;
     text-align: right;
     font-weight: 300;
-    letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
