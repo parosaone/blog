@@ -10,7 +10,8 @@ layout: default
   </div>
 
   <div class="date">
-    최종 수정일: {{ page.date | date: "%Y-%m-%d" }}
+    작성자: <a href="{{ site.baseurl }}/about">파로사</a><br>
+    작성일: {{ page.date | date: "%Y-%m-%d" }}<br>
   </div>
 
   {% include disqus.html %}
