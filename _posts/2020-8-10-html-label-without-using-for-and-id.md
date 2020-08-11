@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HTML Label Without Using For and Corresponding ID
+title: HTML Label Without Using For and ID
 ---
 
 There are two ways to associate a `Label` with its `Controls` (e.g. `Input` Element)
@@ -24,8 +24,6 @@ Using `Label`'s `for` attribute.
     <INPUT type="text" id="firstname">
 ```
 The `Label`'s `for` value should match the `Control`'s `ID` value.
-
-> the value of the for attribute must be the same as the value of the id attribute of the associated control element.
 
 `Control`'s `ID` attribute is required, and since ID is unique, each `Label` is associated with only one `Control`.
 
