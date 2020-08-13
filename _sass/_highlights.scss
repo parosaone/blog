@@ -1,14 +1,24 @@
-pre.highlight {
-    background-color: #efefef;
-    padding: 7px;
-}
-
 code {
     font-family: 'IBM Plex Sans', monospace;
 }
 
+
+/* Inline */
+
 code.highlighter-rouge {
+    color: #586e75;
+    background-color: #fafafa;
+    padding: 0.2em, 0.4em;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+
+/* Block */
+
+pre.highlight {
     background-color: #efefef;
+    padding: 7px;
 }
 
 .highlight .c {
