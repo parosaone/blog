@@ -25,7 +25,7 @@ Using `label`'s `for` attribute.
 ```
 The `label`'s `for` value should match the `control`'s `id` value.
 
-`control`'s `id` attribute is required, and since ID is unique, each `label` is associated with only one `control`.
+Note that `control`'s `id` attribute is required. Since `id` is unique, each `label` is associated with only one `control`.
 
 ## Source
 
