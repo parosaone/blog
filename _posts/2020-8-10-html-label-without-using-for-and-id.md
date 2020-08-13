@@ -3,29 +3,29 @@ layout: post
 title: HTML Label Without Using For and ID
 ---
 
-There are two ways to associate a `Label` with its `Controls` (e.g. `Input` Element)
+There are two ways to associate a `label` with its `control`s (e.g. `input` element)
 
 ## Implicit
-Not Using `Label`'s `for` attribute.
+Not Using `label`'s `for` attribute.
 
 ``` html
-<LABEL>
+<label>
    First Name:
-   <INPUT type="text">
-</LABEL>
+   <input type="text">
+</label>
 ```
-`Control`'s `ID` is not required
+`control`'s `id` is not required
 
 ## Explicit
-Using `Label`'s `for` attribute.
+Using `label`'s `for` attribute.
 
 ``` html
-<LABEL for="firstname">First name: </LABEL>
-    <INPUT type="text" id="firstname">
+<label for="firstname">First name: </label>
+    <input type="text" id="firstname">
 ```
-The `Label`'s `for` value should match the `Control`'s `ID` value.
+The `label`'s `for` value should match the `control`'s `id` value.
 
-`Control`'s `ID` attribute is required, and since ID is unique, each `Label` is associated with only one `Control`.
+`control`'s `id` attribute is required, and since ID is unique, each `label` is associated with only one `control`.
 
 ## Source
 
