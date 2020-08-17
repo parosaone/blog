@@ -1,8 +1,8 @@
 ---
 layout: post
-title: HTML Label Without Using For and ID
+title: HTML LABEL Without FOR Attribute and ID
 date: 2020-08-10 12:00:00 
-lastmod : 2020-08-14 12:30:00
+lastmod : 2020-08-17 11:30:00
 ---
 
 There are two ways to associate a `label` with its `control`s (e.g. `input` element)
