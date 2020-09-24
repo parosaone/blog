@@ -16,6 +16,7 @@ code.highlighter-rouge {
 /* Block */
 
 pre.highlight {
+    overflow: auto;
     background-color: #efefef;
     border-radius: 3px;
     padding: 18px;
