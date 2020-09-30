@@ -2,7 +2,7 @@
 layout: post
 title: Draggable Components in React Native with Touch Support and Spring Back
 date: 2020-09-28 15:00:00 
-lastmod : 2020-09-30 07:00:00 
+lastmod : 2020-09-30 15:00:00 
 ---
 
 Two examples of Draggable Components(Boxes) in React Native. They are from the official website(documentation), and they both support Web as well as iOS and Android.
@@ -83,20 +83,29 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-## Drag with Spring Back
+### Drag with Spring Back
 from [Animated.ValueXY](https://reactnative.dev/docs/animatedvaluexy) API
 <div data-snack-id="qK!doj8BA" data-snack-platform="web" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.08);border-radius:4px;height:505px;width:100%"></div>
 
-### Tips
-[`useNativeDriver`](https://reactnative.dev/blog/2017/02/14/using-native-driver-for-animated) needs to be explicitly specified. In the following code, it is added in the [`Animated.spring`](https://reactnative.dev/docs/animated#spring). The problem is, `useNativeDriver` does not support `pan.getLayout()`. It will cause the following warning.
+#### Using Native Driver
+
+[`useNativeDriver`](https://reactnative.dev/blog/2017/02/14/using-native-driver-for-animated) needs to be explicitly specified.
+
+In the following code, it is newly added in [`Animated.spring`](https://reactnative.dev/docs/animated#spring) and [`Animated.event`](https://reactnative.dev/docs/animated#event). Moreover, [`Animated.event`](https://reactnative.dev/docs/animated#event)'s second argument `config?` is required, and therefore newly added to remove regarding error.
+
+The problem is, `pan.getLayout()` does not support `useNativeDriver: true`. It will cause the below warning. Therefore, `pan.getLayout()` in the original code has been replaced by `pan.getTranslateTransform()`, as guided in this React Native [issue](https://github.com/facebook/react-native/issues/28558).
 
 ```
 Style property 'left' is not supported by native animated module
 ```
 
-Therefore, `pan.getLayout()` in the original code has been replaced by `pan.getTranslateTransform()`, as guided in this React Native [issue](https://github.com/facebook/react-native/issues/28558).
+Similarly, `pan.getLayout()` does not support `useNativeDriver: true`. It will cause the below warning. Therefore, `config`'s `useNativeDriver` is set as `false`, as guided in this React Native [issue](https://github.com/facebook/react-native/issues/13377).
 
-### Source Code
+```
+config.onPanResponderMove is not a function
+```
+
+#### Modified Source Code	
 
 ```jsx
 import React, { useRef } from "react";
@@ -112,14 +121,17 @@ const DraggableView = () => {
       {
         dx: pan.x, // x,y are Animated.Value
         dy: pan.y,
-      },
-    ]),
+      }],
+      {
+        useNativeDriver: false, // Added!
+      }
+    ),
     onPanResponderRelease: () => {
       Animated.spring(
         pan, // Auto-multiplexed
         { 
           toValue: { x: 0, y: 0 }, // Back to zero
-          useNativeDriver: true, // Added
+          useNativeDriver: true, // Added!
         } 
       ).start();
     },
