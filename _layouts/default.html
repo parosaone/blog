@@ -2,59 +2,63 @@
 <html>
 
 <head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-  {% include meta.html %}
+    {% include meta.html %}
 
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
-    href="{{ site.baseurl }}/feed.xml" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 </head>
 
 <body>
-  <div class="wrapper-masthead">
-    <div class="container">
-      <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    <div class="wrapper-masthead">
+        <div class="container">
+            <header class="masthead clearfix">
+                <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-        <div class="site-info">
-          <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-          <div class="site-description">{{ site.description }}</div>
+                <div class="site-info">
+                    <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+                    <div class="site-description">{{ site.description }}</div>
+                </div>
+
+                <nav>
+                    <a href="{{ site.baseurl }}/about">About</a>
+                </nav>
+            </header>
         </div>
-
-        <nav>
-          <a href="{{ site.baseurl }}/">게시글</a>
-          <a href="{{ site.baseurl }}/about">글쓴이</a>
-        </nav>
-      </header>
     </div>
-  </div>
 
-  <div id="main" role="main" class="container">
-    {{ content }}
-  </div>
-
-  <div class="wrapper-footer">
-    <div class="container">
-      <footer class="footer">
-        파로사에 의해 작성된 본 <a href="{{ site.baseurl }}/">웹사이트</a>는 <a
-          href="https://creativecommons.org/licenses/by-nc/2.0/kr/" target="_blank">CC BY-NC</a> 라이선스에 따라 이용할 수 있습니다.
-      </footer>
+    <div id="main" role="main" class="container">
+        {{ content }}
     </div>
-  </div>
 
-  {% include analytics.html %}
+    <div class="wrapper-footer">
+        <div class="container">
+            <footer class="footer">
+                <p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" property="dct:title" href="{{ site.baseurl }}">Parosa Devlog</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="{{ site.baseurl }}/about">parosa</a> is licensed under <a rel="license"
+                        href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0<img
+              style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+              src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" /><img
+              style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+              src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" /><img
+              style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+              src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" /></a></p>
+            </footer>
+        </div>
+    </div>
+
+    {% include analytics.html %}
 </body>
 
 </html>

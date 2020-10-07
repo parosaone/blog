@@ -3,15 +3,15 @@ layout: default
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+    <div class="entry">
+        {{ content }}
+    </div>
 
-  <div class="info">
-    <a href="{{ site.baseurl }}/about">파로사</a> 작성 | {{ page.date | date: "%Y-%m-%d" }} | <a href="#top">최상단으로 이동</a><br>
-  </div>
+    <div class="info">
+        Written By <a href="{{ site.baseurl }}/about">parosa</a> | {{ page.date | date: "%Y-%m-%d" }} | <a href="#top">Back to Top</a><br>
+    </div>
 
-  {% include disqus.html %}
+    {% include disqus.html %}
 </article>

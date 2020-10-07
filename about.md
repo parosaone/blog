@@ -1,27 +1,21 @@
 ---
 layout: page
-title: 파로사는
+title: About Parosa
 permalink: /about/
 ---
 
-### 어쩌다 개발자가 되었습니다.
+## Became a Developer, Somehow
 
-개발을 조금은 하는 기획자가 되어버렸습니다.
+Started developing since 2019, thanks to 정보문화기술입문 class by [JongHwan Oh](https://www.rocketpunch.com/@jhohd9959a00).
 
-어느 순간부터 주객전도가 된 것 같기도 합니다.
+## Still an Undergraduate (2016~)
 
-### 아직은 대학생입니다. (휴학 중)
+Studying [Information Science and Culture](http://isc.snu.ac.kr/) and Economics in [Seoul National University](https://en.snu.ac.kr/).
 
-[연합전공 정보문화학](http://isc.snu.ac.kr/)과 경제학 전공 예정입니다.
+## Sharing Knowledge with Others
 
-회사가 자리 잡을 때 까지는 복학을 보류 중입니다.
+Also running a Korean blog [파로사b](https://blog.naver.com/parosaone) on Naver.
 
-### 지식을 나누는 것을 좋아합니다.
+## Contact
 
-'검색 가능 전체 공개 지식' 작성을 추구합니다.
-
-본 웹사이트와 [네이버 블로그](https://blog.naver.com/parosaone)를 운영 중입니다.
-
-### 연락은
-
-[인스타그램](https://www.instagram.com/parosaone/) DM 또는 [이메일](mailto:parosaone@gmail.com)로 부탁드립니다.
+Frequently checking [Email](mailto:parosaone@gmail.com) and [Instagram](http://instagram.com/parosaone) DM.
