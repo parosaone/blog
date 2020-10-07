@@ -2,9 +2,14 @@
 layout: post
 title: HTTP and HTTPS are Different in Sitemap XML File
 date: 2020-10-7 21:00:00 
+lastmod : 2020-10-8 01:00:00 
 ---
 
-Providing website's sitemap to a search engine(e.g. Google) is important in SEO(Search Engine Optimization). In this context, [sitemap](https://support.google.com/webmasters/answer/156184) is a file that lists pages, videos, and other files of a site. It is not necessary - most search engines can crawl websites without it. However, if the full list is provided, search engines can benefit from it. For example, in Google's [Search Console](https://search.google.com/), there is a menu where the owner of the website can [submit multiple URLs of sitemaps](https://search.google.com/search-console/sitemaps/).
+Providing a website's sitemap to a search engine is important. However, providing incorrect `sitemap.xml` might lead to crawling failure, excluding the page from being searched. One common error is using the wrong protocol in the URL.
+
+## Background Information
+
+In this article's context, [sitemap](https://support.google.com/webmasters/answer/156184) is a file that lists pages, videos, and other files of a site. It is not necessary - most search engines can crawl websites without it. However, if the full list is provided, search engines can benefit from it. For example, in Google's [Search Console](https://search.google.com/), there is a menu where the owner of the website can [submit URLs of sitemaps](https://search.google.com/search-console/sitemaps/).
 
 Following is part of `sitemap.xml` retrieved from [this site](https://parosa.net/sitemap.xml).
 
@@ -41,7 +46,7 @@ A page can be accessed without entering the protocol(e.g. `https://`, `http://`)
 
 ## Possible Error Messages
 
-Providing wrong `sitemap.xml` to search engines result in index errors. These are the error messages received when a sitemap with wrong URL protocol is provided to Google. (`<loc>` starting with `http://` on a HTTPS enforced site)
+Providing a wrong `sitemap.xml` to search engines results in index errors. These are the error messages received when a sitemap with a wrong URL protocol is provided to Google. (`<loc>` starting with `http://` on a HTTPS enforced site)
 
 > **Discovered - currently not indexed**
 > 
@@ -57,7 +62,7 @@ Providing wrong `sitemap.xml` to search engines result in index errors. These ar
 > 
 > from [Index Coverage report](https://support.google.com/webmasters/answer/7440203), Google Support
 
-All pages in `sitemap.xml` are shown in the Search Console, but all of them are constantly excluded from being indexed. Unlike Google's explanation, the site is not overloaded (if URL with wrong protocol is provided).
+All pages in `sitemap.xml` are shown in the Search Console, but all of them are constantly excluded from being indexed. Unlike Google's explanation, the site is not overloaded (if URL with a wrong protocol is provided).
 
 Note that there are other causes of **Excluded**, including (1) Blocked by robots.txt and (2) Excluded by ‘noindex’ tag. Read the [documentation](https://support.google.com/webmasters/answer/7440203) thoroughly before asking questions on forums.
 
