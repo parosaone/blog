@@ -2,6 +2,7 @@
 layout: post
 title: Visual Studio Code Keyboard Shortcuts Favorites
 date: 2020-09-16 12:00:00 
+lastmod : 2020-10-30 13:40:00 
 ---
 
 Personal note on [Visual Studio Code](https://code.visualstudio.com/)'s keyboard shortcuts in Windows Operating System. Some shortcuts are added at later versions, so update VS Code if needed.
@@ -22,6 +23,28 @@ Can be applied to individual line or block(lines). Adapts to the selected langua
 ### Comment Remove
 `Ctrl+K` & `Ctrl+U` 
 
+## Define Regions
+
+> You can fold regions of source code using the folding icons on the gutter between line numbers and line start. Move the mouse over the gutter and click to fold and unfold regions.
+
+> Regions can also be defined by markers defined by each language. The following languages currently have markers defined:
+
+|Language|Start region|End region|
+|--- |--- |--- |
+|Bat|::#region or REM #region|::#endregion or REM #endregion|
+|C#|#region|#endregion|
+|C/C++|#pragma region|#pragma endregion|
+|CSS/Less/SCSS|/*#region*/|/*#endregion*/|
+|Coffeescript|#region|#endregion|
+|F#|//#region or (#_region)|//#endregion or (#_endregion)|
+|Java|//#region or //<editor-fold>|// #endregion or //</editor-fold>|
+|Markdown|<!-- #region -->|<!-- #endregion -->|
+|Perl5|#region or =pod|#endregion or =cut|
+|PHP|#region|#endregion|
+|PowerShell|#region|#endregion|
+|Python|#region or # region|#endregion or # endregion|
+|TypeScript/JavaScript|//#region|//#endregion|
+|Visual Basic|#Region|#End Region|
 
 ## Multi-Cursor
 
